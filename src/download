@@ -71,6 +71,9 @@
             <div class="list-group">
               <a class="list-group-item" href="https://johnvansickle.com/ffmpeg/">32-bit and
                 64-bit for kernel 3.2.0 and above</a>
+              <a class="list-group-item" href="https://github.com/BtbN/FFmpeg-Builds/releases">
+                64-bit static and shared builds</a>
+
             </div> <!-- list-group -->
 
           </div> <!-- build -->
