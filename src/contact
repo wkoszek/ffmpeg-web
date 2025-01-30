@@ -104,7 +104,7 @@
           IRC network. Both channels are open and unmoderated. Maintainers
           have operator status, contributors with patches in FFmpeg
           have voice in the channels.
-          <a href="https://kiwiirc.com/nextclient/irc.libera.chat/?channels=#ffmpeg,#ffmpeg-devel">kiwiirc webchat</a> is a web
+          <a href="https://web.libera.chat/?channels=#ffmpeg,#ffmpeg-devel">Web.Libera.Chat</a> is a web
           client for these channels.
           Please read and follow the <a href="community.html#CodeOfConduct">Code of conduct</a>.
         </p>
