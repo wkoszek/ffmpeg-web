@@ -1,5 +1,12 @@
 <p>Please report vulnerabilities to <a href="mailto:ffmpeg-security@ffmpeg.org">ffmpeg-security@ffmpeg.org</a></p>
 
+<h2>FFmpeg git master</h2>
+<p>
+Fixes following vulnerabilities:
+</p>
+<pre>
+CVE-2025-1373, 43be8d07281caca2e88bfd8ee2333633e1fb1a13, ticket/11460 never affected a release
+</pre>
 
 <h2>FFmpeg 7.0</h2>
 
@@ -20,8 +27,9 @@ CVE-2023-49501, 4adb93dff05dd947878c67784d98c9a4e13b57a7, ticket/10686
 CVE-2023-49502, 737ede405b11a37fdd61d19cf25df296a0cb0b75, ticket/10688
 CVE-2023-50007, b1942734c7cbcdc9034034373abcc9ecb9644c47, ticket/10700
 CVE-2023-50008, 5f87a68cf70dafeab2fb89b42e41a4c29053b89b, ticket/10701
-CVE-2024-31582, 99debe5f823f45a482e1dc08de35879aa9c74bd2
 CVE-2024-28661, 66b50445cb36cf6adb49c2397362509aedb42c71
+CVE-2024-31578, 3bb00c0a420c3ce83c6fafee30270d69622ccad7
+CVE-2024-31582, 99debe5f823f45a482e1dc08de35879aa9c74bd2
 CVE-2024-36617, d973fcbcc2f944752ff10e6a76b0b2d9329937a7
 </pre>
 
@@ -34,6 +42,7 @@ Fixes following vulnerabilities:
 </p>
 <pre>
 CVE-2024-7055, d0ce252930357406a0435d0d783db4b1467345aa / 3faadbe2a27e74ff5bb5f7904ec27bb1f5287dc8
+CVE-2024-36617, d66b1af8df7902a3b6226f13410112d9ff27bfc4 / d973fcbcc2f944752ff10e6a76b0b2d9329937a7
 </pre>
 
 <h3>6.1</h3>
