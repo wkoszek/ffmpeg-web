@@ -8,6 +8,26 @@ Fixes following vulnerabilities:
 CVE-2025-1373, 43be8d07281caca2e88bfd8ee2333633e1fb1a13, ticket/11460 never affected a release
 </pre>
 
+
+<h2>FFmpeg 7.1</h2>
+
+<h3>7.1.1</h3>
+<p>
+Fixes following vulnerabilities:
+</p>
+<pre>
+CVE-2025-0518, b827ac49b770635fc666f8543cb9585e1bc6308b / b5b6391d64807578ab872dc58fb8aa621dcfc38a
+</pre>
+
+<h3>7.1</h3>
+<p>
+Fixes following vulnerabilities:
+</p>
+<pre>
+CVE-2024-7055 3faadbe2a27e74ff5bb5f7904ec27bb1f5287dc8
+</pre>
+
+
 <h2>FFmpeg 7.0</h2>
 
 <h3>7.0.2</h3>
