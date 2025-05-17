@@ -198,6 +198,16 @@ CVE-2023-47343, 0f6a3405e8987ad761a2d9139fdc95bbb6a61118
 
 <h2>FFmpeg 4.4</h2>
 
+<h3>4.4.6</h3>
+<p>
+Fixes following vulnerabilities:
+</p>
+<pre>
+CVE-2023-49502, eb1782ea84ebdb357917b249a353552060a8ebe4 / 737ede405b11a37fdd61d19cf25df296a0cb0b75, ticket/10688
+CVE-2025-0518,  a0e2fd18917a19605bb4efd12c7501c6b8bc26d0 / b5b6391d64807578ab872dc58fb8aa621dcfc38a
+CVE-2025-22919, 2ec7f8ea4da98449061cb0f7e61c5d1cb4e1cc92 / 1446e37d3d032e1452844778b3e6ba2c20f0c322, ticket/11385
+</pre>
+
 <h3>4.4.5</h3>
 <p>
 Fixes following vulnerabilities:
@@ -205,6 +215,7 @@ Fixes following vulnerabilities:
 <pre>
 CVE-2024-7055,  ceeb1928da9a3aedd6fff935790c70405d4b12bf / 3faadbe2a27e74ff5bb5f7904ec27bb1f5287dc8
 CVE-2023-47342, d8a3d7b4f91249b1ff02d4474c78111b8688d605 / e4d5ac8d7d2a08658b3db7dd821246fe6b35381f
+CVE-2024-36617, 625ca605f5b1f60f6409949533bcff8982d61464 / d973fcbcc2f944752ff10e6a76b0b2d9329937a7
 </pre>
 
 <h3>4.4.4</h3>
@@ -417,6 +428,16 @@ CVE-2021-38094, 99f8d32129dd233d4eb2efa44678a0bc44869f23, ticket/8263, duplicate
 
 <h2>FFmpeg 4.2</h2>
 
+<h3>4.2.11</h3>
+<p>
+Fixes following vulnerabilities:
+</p>
+<pre>
+CVE-2023-49502, de0ec0d3af39ba180fe06cf90880e4c487b5dec3 / 737ede405b11a37fdd61d19cf25df296a0cb0b75, ticket/10688
+CVE-2025-0518,  6b43edeb24e4e7cbf4c85c94a86be7333a844f65 / b5b6391d64807578ab872dc58fb8aa621dcfc38a
+CVE-2025-22919, 20dee7be59c8f1ed8b02c89c206f56c77cff61dc / 1446e37d3d032e1452844778b3e6ba2c20f0c322, ticket/11385
+</pre>
+
 <h3>4.2.10</h3>
 <p>
 Fixes following vulnerabilities:
@@ -431,6 +452,7 @@ Fixes following vulnerabilities:
 </p>
 <pre>
 CVE-2022-3109, b2e1ee39f52e285cd630786019cff5d8d12aa1a1 / 656cb0450aeb73b25d7d26980af342b37ac4c568
+CVE-2024-36617,119eb87952d5bc403d946c79a1a7490022823ebc / d973fcbcc2f944752ff10e6a76b0b2d9329937a7
 </pre>
 
 <h3>4.2.7</h3>
