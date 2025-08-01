@@ -29,6 +29,7 @@ Fixes following vulnerabilities:
 </p>
 <pre>
 CVE-2024-7055 3faadbe2a27e74ff5bb5f7904ec27bb1f5287dc8
+CVE-2024-35368, 4513300989502090c4fd6560544dce399a8cd53c (specific to builds with --enable-rkmpp)
 </pre>
 
 
@@ -54,6 +55,7 @@ CVE-2023-50008, 5f87a68cf70dafeab2fb89b42e41a4c29053b89b, ticket/10701
 CVE-2024-28661, 66b50445cb36cf6adb49c2397362509aedb42c71
 CVE-2024-31578, 3bb00c0a420c3ce83c6fafee30270d69622ccad7
 CVE-2024-31582, 99debe5f823f45a482e1dc08de35879aa9c74bd2
+CVE-2024-35367, 09e6840cf7a3ee07a73c3ae88a020bf27ca1a667 (specific to builds for ppc with altivec)
 CVE-2024-36617, d973fcbcc2f944752ff10e6a76b0b2d9329937a7
 </pre>
 
