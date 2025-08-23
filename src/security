@@ -20,6 +20,7 @@ CVE-2023-6604,  91d96dc8ddaebe0b6cb393f672085e6bfaf15a31
 CVE-2023-6605,  4c96d6bf75357ab13808efc9f08c1b41b1bf5bdf
 CVE-2025-0518,  b5b6391d64807578ab872dc58fb8aa621dcfc38a
 CVE-2025-1373,  43be8d07281caca2e88bfd8ee2333633e1fb1a13, ticket/11460 never affected a release
+CVE-2025-1594,  bedfb6eca402037f5cbb115fa767d106b8c14f1c, ticket/11418
 CVE-2025-1816,  0526535cd58444dd264e810b2f3348b4d96cff3b, ticket/11475,
 CVE-2025-22919, 1446e37d3d032e1452844778b3e6ba2c20f0c322, ticket/11385,
 CVE-2025-22920, 4bf784c0e5615c3f934e677d5de093a8be7da7ae, ticket/11389 never affected a release
@@ -53,6 +54,14 @@ CVE-2024-35368, 4513300989502090c4fd6560544dce399a8cd53c (specific to builds wit
 
 
 <h2>FFmpeg 7.0</h2>
+
+<h3>7.0.3</h3>
+<p>
+Fixes following vulnerabilities:
+</p>
+<pre>
+CVE-2025-1594,  f98f142da571653436596ccad2d09c7e39bfd4fb, ticket/11418
+</pre>
 
 <h3>7.0.2</h3>
 <p>
