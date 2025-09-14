@@ -30,6 +30,14 @@ CVE-2025-25471, fd1772b7475d0d5673a5dd314ee78443d0be4cf1, ticket/11417 never aff
 
 <h2>FFmpeg 7.1</h2>
 
+<h3>7.1.2</h3>
+<p>
+Fixes following vulnerabilities:
+</p>
+<pre>
+CVE-2025-1594,  c2184b65d214d60f2d3df86a11ca502567a3d134, ticket/11418
+</pre>
+
 <h3>7.1.1</h3>
 <p>
 Fixes following vulnerabilities:
