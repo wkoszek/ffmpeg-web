@@ -1,0 +1,21 @@
+baseURL = 'https://ffmpeg.org/'
+languageCode = 'en-us'
+title = 'FFmpeg'
+theme = 'ffmpeg'
+
+# Use "ugly URLs" (e.g., about.html instead of about/index.html) to match original site
+uglyURLs = true
+
+# Disable some Hugo features we don't need
+disableKinds = ['taxonomy', 'term', 'RSS']
+
+# Preserve HTML in markdown
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true  # Allow raw HTML in markdown (required for our HTML content)
+
+# Output settings
+[outputs]
+  home = ['HTML']
+  page = ['HTML']
