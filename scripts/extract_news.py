@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """
-extract_news.py - Extract news entries from index page into individual files
+extract_news.py - Extract news entries from index page into individual Markdown files
 
 This script parses the index page and extracts each news entry (<h3> + content)
-into individual markdown files for Hugo.
+into individual markdown files for Hugo, converting HTML to proper Markdown.
 
 Usage:
-  ./extract_news.py <index_file> <output_dir>
+  ./extract_news.py <index_file> <output_dir> [--html]
   ./extract_news.py src/index hugo-site/content/news
+  ./extract_news.py src/index hugo-site/content/news --html  # Keep as HTML
 """
 
 import sys
@@ -16,6 +17,7 @@ from pathlib import Path
 from datetime import datetime
 from lxml import html as lxml_html, etree
 import hashlib
+import html2text
 
 
 def parse_date(date_str):
@@ -40,6 +42,41 @@ def parse_date(date_str):
             return dt, dt.strftime('%Y-%m-%d')
         except:
             return None, date_str
+
+
+def html_to_markdown(html_content):
+    """
+    Convert HTML to Markdown
+
+    Uses html2text library with FFmpeg-friendly settings:
+    - No wrapping (preserve line breaks as in original)
+    - Keep links inline
+    - Preserve code blocks
+    - Don't escape special characters unnecessarily
+    """
+    h = html2text.HTML2Text()
+
+    # Configure html2text for clean output
+    h.body_width = 0  # No wrapping
+    h.unicode_snob = True  # Use unicode characters
+    h.ignore_links = False  # Keep links
+    h.ignore_images = False  # Keep images
+    h.ignore_emphasis = False  # Keep bold/italic
+    h.skip_internal_links = False  # Keep anchor links
+    h.inline_links = True  # Use inline link style [text](url)
+    h.protect_links = True  # Don't wrap URLs
+    h.wrap_links = False  # Don't wrap link text
+
+    # Convert
+    markdown = h.handle(html_content)
+
+    # Clean up common issues
+    markdown = markdown.strip()
+
+    # Remove excessive blank lines (more than 2 in a row)
+    markdown = re.sub(r'\n{3,}', '\n\n', markdown)
+
+    return markdown
 
 
 def extract_news_entries(index_file):
@@ -121,11 +158,16 @@ def extract_news_entries(index_file):
     return entries
 
 
-def create_news_markdown(entry, output_dir):
+def create_news_markdown(entry, output_dir, keep_html=False):
     """
     Create a markdown file for a news entry
 
     Filename format: YYYY-MM-DD-slug.md or index-slug.md if no date
+
+    Args:
+        entry: News entry dict
+        output_dir: Output directory path
+        keep_html: If True, keep content as HTML; if False, convert to Markdown
     """
     # Generate slug from id
     slug = entry['id']
@@ -139,29 +181,37 @@ def create_news_markdown(entry, output_dir):
 
     filepath = output_dir / filename
 
-    # Generate frontmatter
-    frontmatter = "+++\n"
-    frontmatter += f'title = "{entry["title_full"]}"\n'
+    # Escape quotes in title for YAML
+    title_escaped = entry["title_full"].replace('"', '\\"')
+
+    # Generate YAML frontmatter
+    frontmatter = "---\n"
+    frontmatter += f'title: "{title_escaped}"\n'
 
     if entry['date_iso']:
-        frontmatter += f'date = {entry["date_iso"]}T00:00:00Z\n'
+        frontmatter += f'date: {entry["date_iso"]}T00:00:00Z\n'
 
-    frontmatter += f'slug = "{slug}"\n'
-    frontmatter += 'type = "news"\n'
+    frontmatter += f'slug: {slug}\n'
+    frontmatter += 'type: news\n'
 
-    # Add original date string if different from title
+    # Add original date string if present
     if entry['date_str']:
-        frontmatter += f'date_display = "{entry["date_str"]}"\n'
+        frontmatter += f'date_display: "{entry["date_str"]}"\n'
 
-    # Checksum for verification
+    # Checksum for verification (always of original HTML)
     content_hash = hashlib.sha256(entry['content_html'].encode('utf-8')).hexdigest()
-    frontmatter += f'\n[checksums]\n'
-    frontmatter += f'content = "{content_hash}"\n'
+    frontmatter += f'checksum_html: {content_hash}\n'
 
-    frontmatter += "+++\n\n"
+    frontmatter += "---\n\n"
+
+    # Convert content
+    if keep_html:
+        content = entry['content_html']
+    else:
+        content = html_to_markdown(entry['content_html'])
 
     # Combine frontmatter + content
-    full_content = frontmatter + entry['content_html']
+    full_content = frontmatter + content
 
     # Write file
     filepath.write_text(full_content, encoding='utf-8')
@@ -171,13 +221,15 @@ def create_news_markdown(entry, output_dir):
 
 def main():
     if len(sys.argv) < 3:
-        print("Usage: extract_news.py <index_file> <output_dir>")
-        print("\nExample:")
+        print("Usage: extract_news.py <index_file> <output_dir> [--html]")
+        print("\nExamples:")
         print("  extract_news.py src/index hugo-site/content/news")
+        print("  extract_news.py src/index hugo-site/content/news --html  # Keep as HTML")
         return 1
 
     index_file = Path(sys.argv[1])
     output_dir = Path(sys.argv[2])
+    keep_html = '--html' in sys.argv
 
     if not index_file.exists():
         print(f"Error: Index file not found: {index_file}")
@@ -186,7 +238,10 @@ def main():
     # Create output directory
     output_dir.mkdir(parents=True, exist_ok=True)
 
+    format_mode = "HTML" if keep_html else "Markdown"
     print(f"Extracting news entries from {index_file}...")
+    print(f"Output format: {format_mode}")
+
     entries = extract_news_entries(index_file)
 
     print(f"Found {len(entries)} news entries")
@@ -194,7 +249,7 @@ def main():
 
     # Create markdown files
     for entry in entries:
-        filepath = create_news_markdown(entry, output_dir)
+        filepath = create_news_markdown(entry, output_dir, keep_html=keep_html)
 
         date_display = entry['date_str'] or f"Entry {entry['index']}"
         print(f"  ✓ {date_display}")
@@ -211,6 +266,7 @@ def main():
     print(f"\nStatistics:")
     print(f"  Entries with dates: {with_dates}")
     print(f"  Entries without dates: {without_dates}")
+    print(f"  Format: {format_mode}")
 
     if entries:
         # Find date range
