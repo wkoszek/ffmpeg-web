@@ -1,0 +1,141 @@
++++
+title = "Documentation"
+slug = "documentation"
+type = "page"
+
+[checksums]
+content = "cd3380e8412bec72209dbf8ca7c4827f87a504ad00855ebc0f918f4e7fdf189d"
+title = "c205924de0fe636ccdde4ed616fef66f75b78e98b03620637965c033fd161141"
+js = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
++++
+
+<p>
+  The following documentation is regenerated nightly, and corresponds to
+  the <a href="download.html">newest FFmpeg revision</a>.
+  Consult your locally installed documentation for older versions.
+</p>
+
+<br><br>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="well well-with-icon" id="command-line">
+      <span class="pull-right"><i class="fa fa-5x fa-fw fa-terminal"></i></span>
+      <h3><strong>Command Line Tools Documentation</strong></h3>
+      <ul>
+        <li><a href="ffmpeg.html">ffmpeg</a>: <tt>ffmpeg</tt> tool</li>
+        <li><a href="ffmpeg-all.html">ffmpeg-all</a>: <tt>ffmpeg</tt> tool and FFmpeg components</li>
+        <li><a href="ffplay.html">ffplay</a>: <tt>ffplay</tt> tool</li>
+        <li><a href="ffplay-all.html">ffplay-all</a>: <tt>ffplay</tt> tool and FFmpeg components</li>
+        <li><a href="ffprobe.html">ffprobe</a>: <tt>ffprobe</tt> tool</li>
+        <li><a href="ffprobe-all.html">ffprobe-all</a>: <tt>ffprobe</tt> tool and FFmpeg components</li>
+      </ul>
+    </div>
+  </div> <!-- col -->
+  <div class="col-md-6">
+    <div class="well well-with-icon" id="components">
+      <span class="pull-right"><i class="fa fa-5x fa-fw fa-sitemap"></i></span>
+      <h3><strong>Components Documentation</strong></h3>
+      <ul>
+        <li><a href="ffmpeg-utils.html">Utilities</a></li>
+        <li><a href="ffmpeg-scaler.html">Video scaling and pixel format converter</a></li>
+        <li><a href="ffmpeg-resampler.html">Audio resampler</a></li>
+        <li><a href="ffmpeg-codecs.html">Encoders and decoders (codecs)</a></li>
+        <li><a href="ffmpeg-bitstream-filters.html">Bitstream filters</a></li>
+        <li><a href="ffmpeg-formats.html">Muxers and demuxers (formats)</a></li>
+        <li><a href="ffmpeg-protocols.html">Protocols</a></li>
+        <li><a href="ffmpeg-devices.html">Input and output devices</a></li>
+        <li><a href="ffmpeg-filters.html">Filters</a></li>
+      </ul>
+    </div>
+  </div> <!-- col -->
+</div> <!-- row -->
+<div class="row">
+  <div class="col-md-6">
+    <div class="well well-with-icon" id="libraries">
+      <span class="pull-right"><i class="fa fa-5x fa-fw fa-cogs"></i></span>
+      <h3><strong>Libraries Documentation</strong></h3>
+      <ul>
+        <li><a href="libavutil.html">libavutil</a></li>
+        <li><a href="libswscale.html">libswscale</a></li>
+        <li><a href="libswresample.html">libswresample</a></li>
+        <li><a href="libavcodec.html">libavcodec</a></li>
+        <li><a href="libavformat.html">libavformat</a></li>
+        <li><a href="libavdevice.html">libavdevice</a></li>
+        <li><a href="libavfilter.html">libavfilter</a></li>
+      </ul>
+    </div>
+  </div> <!-- col -->
+  <div class="col-md-6">
+    <div class="well well-with-icon" id="more">
+      <span class="pull-right"><i class="fa fa-5x fa-fw fa-file-text-o"></i></span>
+      <h3><strong>General Documentation</h2></strong></h3>
+<ul>
+  <li><a href="faq.html">Frequently Asked Questions</a></li>
+  <li><a href="general.html">Supported External Libraries, Formats, Codecs or Features</a></li>
+  <li><a href="platform.html">Platform Specific Information</a></li>
+  <li><a href="developer.html">Developer Documentation</a></li>
+  <li><a href="git-howto.html">Git How-To</a></li>
+  <li><a href="fate.html">FATE FFmpeg Automated Testing Environment</a></li>
+</ul>
+</div>
+</div> <!-- col -->
+</div> <!-- row -->
+<div class="row">
+  <div class="col-md-6">
+    <div class="well well-with-icon">
+      <span class="pull-right"><i class="fa fa-5x fa-fw fa-puzzle-piece"></i></span>
+      <h3><strong>API Documentation</strong></h3>
+      <ul>
+        <li><a href="doxygen/trunk/index.html">Doxygen documentation</a> for current
+          trunk (regenerated nightly); documentation for the
+          <a href="doxygen/8.0/index.html">8.0</a>,
+          <a href="doxygen/7.1/index.html">7.1</a>,
+          <a href="doxygen/7.0/index.html">7.0</a>,
+          <a href="doxygen/6.1/index.html">6.1</a>,
+          <a href="doxygen/6.0/index.html">6.0</a>,
+          <a href="doxygen/5.1/index.html">5.1</a>,
+          <a href="doxygen/5.0/index.html">5.0</a>,
+          <a href="doxygen/4.4/index.html">4.4</a>,
+          <a href="doxygen/4.3/index.html">4.3</a>,
+          <a href="doxygen/4.2/index.html">4.2</a>,
+          <a href="doxygen/4.1/index.html">4.1</a>,
+          <a href="doxygen/4.0/index.html">4.0</a>,
+          <a href="doxygen/3.4/index.html">3.4</a>,
+          <a href="doxygen/3.3/index.html">3.3</a>,
+          <a href="doxygen/3.2/index.html">3.2</a>,
+          <a href="doxygen/3.1/index.html">3.1</a>,
+          <a href="doxygen/3.0/index.html">3.0</a>,
+          <a href="doxygen/2.8/index.html">2.8</a>,
+          <a href="doxygen/2.7/index.html">2.7</a>,
+          <a href="doxygen/2.6/index.html">2.6</a>,
+          <a href="doxygen/2.5/index.html">2.5</a>,
+          <a href="doxygen/2.4/index.html">2.4</a>,
+          <a href="doxygen/2.3/index.html">2.3</a>,
+          <a href="doxygen/2.2/index.html">2.2</a>,
+          <a href="doxygen/2.1/index.html">2.1</a>,
+          <a href="doxygen/2.0/index.html">2.0</a>,
+          <a href="doxygen/1.2/index.html">1.2</a>,
+          <a href="doxygen/1.1/index.html">1.1</a>,
+          <a href="doxygen/1.0/index.html">1.0</a>,
+          <a href="doxygen/0.11/index.html">0.11</a>,
+          <a href="doxygen/0.10/index.html">0.10</a>,
+          <a href="doxygen/0.9/index.html">0.9</a>,
+          <a href="doxygen/0.8/index.html">0.8</a>,
+          <a href="doxygen/0.7/index.html">0.7</a>,
+          <a href="doxygen/0.6/index.html">0.6</a> and
+          <a href="doxygen/0.5/index.html">0.5</a> branches is also available.</li>
+      </ul>
+    </div>
+  </div> <!-- col -->
+  <div class="col-md-6">
+    <div class="well well-with-icon">
+      <span class="pull-right"><i class="fa fa-5x fa-fw fa-users"></i></span>
+      <h3><strong>Community Contributed Documentation</strong></h3>
+      <ul>
+        <li><a href="https://trac.ffmpeg.org/wiki">Official FFmpeg Wiki</a></li>
+        <li><a href="https://trac.ffmpeg.org/wiki/BooksAndOtherExternalResources">Books and other external resources</a></li>
+      </ul>
+    </div>
+  </div> <!-- col -->
+</div> <!-- row -->

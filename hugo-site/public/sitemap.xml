@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://ffmpeg.org/about.html</loc>
+  </url><url>
+    <loc>https://ffmpeg.org/archive.html</loc>
+  </url><url>
+    <loc>https://ffmpeg.org/bugreports.html</loc>
+  </url><url>
+    <loc>https://ffmpeg.org/contact.html</loc>
+  </url><url>
+    <loc>https://ffmpeg.org/documentation.html</loc>
+  </url><url>
+    <loc>https://ffmpeg.org/donations.html</loc>
+  </url><url>
+    <loc>https://ffmpeg.org/download.html</loc>
+  </url><url>
+    <loc>https://ffmpeg.org/</loc>
+  </url><url>
+    <loc>https://ffmpeg.org/legal.html</loc>
+  </url><url>
+    <loc>https://ffmpeg.org/security.html</loc>
+  </url><url>
+    <loc>https://ffmpeg.org/consulting.html</loc>
+  </url><url>
+    <loc>https://ffmpeg.org/shame.html</loc>
+  </url><url>
+    <loc>https://ffmpeg.org/olddownload.html</loc>
+  </url><url>
+    <loc>https://ffmpeg.org/spi.html</loc>
+  </url>
+</urlset>

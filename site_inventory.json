@@ -1,0 +1,567 @@
+{
+  "analysis_metadata": {
+    "base_dir": "/home/user/ffmpeg-web",
+    "purpose": "Zero-hallucination site structure analysis",
+    "script": "analyze_site.py",
+    "src_dir": "/home/user/ffmpeg-web/src"
+  },
+  "makefile": {
+    "exists": true,
+    "page_count": 14,
+    "pages": [
+      "about",
+      "bugreports",
+      "consulting",
+      "contact",
+      "donations",
+      "documentation",
+      "download",
+      "olddownload",
+      "index",
+      "legal",
+      "shame",
+      "security",
+      "spi",
+      "archive"
+    ],
+    "path": "/home/user/ffmpeg-web/Makefile",
+    "sha256": "c8c28cb508c27ee6469386aad602e6b2dfd998250c7b610944451bdf28ba88de",
+    "size_bytes": 2749
+  },
+  "pages": {
+    "about": {
+      "files": {
+        "content": {
+          "exists": true,
+          "path": "/home/user/ffmpeg-web/src/about",
+          "sha256": "eeaf52452adc68ddc49b58d7935be34227051d2b73d86f264f0f1a4474bbc8ea",
+          "size_bytes": 5022
+        },
+        "js": {
+          "content": "",
+          "exists": true,
+          "has_content": false,
+          "path": "/home/user/ffmpeg-web/src/about_js",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size_bytes": 0
+        },
+        "title": {
+          "content": "About FFmpeg",
+          "exists": true,
+          "path": "/home/user/ffmpeg-web/src/about_title",
+          "sha256": "0715219768e0b4814aa626588da9555281500e660ed793fdf9f1cda8af30616b",
+          "size_bytes": 12
+        }
+      },
+      "html_metadata": {
+        "element_count": 80,
+        "has_headings": true,
+        "has_images": false,
+        "has_links": true,
+        "root_element": "div"
+      },
+      "name": "about"
+    },
+    "archive": {
+      "files": {
+        "content": {
+          "exists": true,
+          "path": "/home/user/ffmpeg-web/src/archive",
+          "sha256": "1f1e5183c12b35a37bbae55f92fc39199b87cc81b3aede9c48f85ba7ec85c405",
+          "size_bytes": 68555
+        },
+        "js": {
+          "content": "",
+          "exists": true,
+          "has_content": false,
+          "path": "/home/user/ffmpeg-web/src/archive_js",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size_bytes": 0
+        },
+        "title": {
+          "content": "Archive",
+          "exists": true,
+          "path": "/home/user/ffmpeg-web/src/archive_title",
+          "sha256": "66f4804ee23ddc092d1bae43cb88186aa541187fff7c1cc8a4aa17e59a9f4123",
+          "size_bytes": 7
+        }
+      },
+      "html_metadata": {
+        "element_count": 602,
+        "has_headings": true,
+        "has_images": true,
+        "has_links": true,
+        "root_element": "div"
+      },
+      "name": "archive"
+    },
+    "bugreports": {
+      "files": {
+        "content": {
+          "exists": true,
+          "path": "/home/user/ffmpeg-web/src/bugreports",
+          "sha256": "5b079a34886bc7896eb08b3ba6b4afc355bbadcd7d88abda43cc613aa4d244bf",
+          "size_bytes": 5939
+        },
+        "js": {
+          "content": "",
+          "exists": true,
+          "has_content": false,
+          "path": "/home/user/ffmpeg-web/src/bugreports_js",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size_bytes": 0
+        },
+        "title": {
+          "content": "Bug Reports",
+          "exists": true,
+          "path": "/home/user/ffmpeg-web/src/bugreports_title",
+          "sha256": "4664f8a1bd5464f368ae177add4b5d96a3a2f9e51a6571d0698e7edebfe20ef3",
+          "size_bytes": 11
+        }
+      },
+      "html_metadata": {
+        "element_count": 110,
+        "has_headings": true,
+        "has_images": false,
+        "has_links": true,
+        "root_element": "div"
+      },
+      "name": "bugreports"
+    },
+    "consulting": {
+      "files": {
+        "content": {
+          "exists": true,
+          "path": "/home/user/ffmpeg-web/src/consulting",
+          "sha256": "82c02951e543b85491f146a930aca77edf44d459f6977fb783ada8dacb04a887",
+          "size_bytes": 5775
+        },
+        "js": {
+          "content": "",
+          "exists": true,
+          "has_content": false,
+          "path": "/home/user/ffmpeg-web/src/consulting_js",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size_bytes": 0
+        },
+        "title": {
+          "content": "FFmpeg-related consulting and employment opportunities",
+          "exists": true,
+          "path": "/home/user/ffmpeg-web/src/consulting_title",
+          "sha256": "27e779f8621a5406680d1059420939809bee3fd1fc6135ab73b7d90160d70395",
+          "size_bytes": 54
+        }
+      },
+      "html_metadata": {
+        "element_count": 54,
+        "has_headings": true,
+        "has_images": false,
+        "has_links": true,
+        "root_element": "div"
+      },
+      "name": "consulting"
+    },
+    "contact": {
+      "files": {
+        "content": {
+          "exists": true,
+          "path": "/home/user/ffmpeg-web/src/contact",
+          "sha256": "58d988231cf8fca9e03feaa5e7cf4b4e186d3453582d49e1ba60bb3d09d796ca",
+          "size_bytes": 8170
+        },
+        "js": {
+          "content": "",
+          "exists": true,
+          "has_content": false,
+          "path": "/home/user/ffmpeg-web/src/contact_js",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size_bytes": 0
+        },
+        "title": {
+          "content": "Contact Us",
+          "exists": true,
+          "path": "/home/user/ffmpeg-web/src/contact_title",
+          "sha256": "98b67063cf8e584d75e53b88472ee85473e01e0ea16f29ece9cc98f4a2710494",
+          "size_bytes": 10
+        }
+      },
+      "html_metadata": {
+        "element_count": 93,
+        "has_headings": true,
+        "has_images": false,
+        "has_links": true,
+        "root_element": "div"
+      },
+      "name": "contact"
+    },
+    "documentation": {
+      "files": {
+        "content": {
+          "exists": true,
+          "path": "/home/user/ffmpeg-web/src/documentation",
+          "sha256": "cd3380e8412bec72209dbf8ca7c4827f87a504ad00855ebc0f918f4e7fdf189d",
+          "size_bytes": 6211
+        },
+        "js": {
+          "content": "",
+          "exists": true,
+          "has_content": false,
+          "path": "/home/user/ffmpeg-web/src/documentation_js",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size_bytes": 0
+        },
+        "title": {
+          "content": "Documentation",
+          "exists": true,
+          "path": "/home/user/ffmpeg-web/src/documentation_title",
+          "sha256": "c205924de0fe636ccdde4ed616fef66f75b78e98b03620637965c033fd161141",
+          "size_bytes": 13
+        }
+      },
+      "html_metadata": {
+        "element_count": 155,
+        "has_headings": true,
+        "has_images": false,
+        "has_links": true,
+        "root_element": "div"
+      },
+      "name": "documentation"
+    },
+    "donations": {
+      "files": {
+        "content": {
+          "exists": true,
+          "path": "/home/user/ffmpeg-web/src/donations",
+          "sha256": "a7471390fa04813c8c5228b7bd22d61e5d12dddca7ef6b25003b47128aa47da1",
+          "size_bytes": 1832
+        },
+        "js": {
+          "content": "",
+          "exists": true,
+          "has_content": false,
+          "path": "/home/user/ffmpeg-web/src/donations_js",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size_bytes": 0
+        },
+        "title": {
+          "content": "Donations",
+          "exists": true,
+          "path": "/home/user/ffmpeg-web/src/donations_title",
+          "sha256": "5f3360fbda697ca7f699633088f4bce3c344574450978c3c430d15a6d3cc7e91",
+          "size_bytes": 9
+        }
+      },
+      "html_metadata": {
+        "element_count": 43,
+        "has_headings": true,
+        "has_images": false,
+        "has_links": true,
+        "root_element": "div"
+      },
+      "name": "donations"
+    },
+    "download": {
+      "files": {
+        "content": {
+          "exists": true,
+          "path": "/home/user/ffmpeg-web/src/download",
+          "sha256": "53f4caf4286ff293107825adaea550a4292b45d036828cb661985833bb3603b9",
+          "size_bytes": 27062
+        },
+        "js": {
+          "content": "<script src=\"js/download.js\"></script>",
+          "exists": true,
+          "has_content": true,
+          "path": "/home/user/ffmpeg-web/src/download_js",
+          "sha256": "96623675059c934f585a1750b5eb5e08766f5ac8a796128680ec86eadebcdb40",
+          "size_bytes": 43
+        },
+        "title": {
+          "content": "Download FFmpeg",
+          "exists": true,
+          "path": "/home/user/ffmpeg-web/src/download_title",
+          "sha256": "ec97c49de108cd7b41fcb147dd266cc695905b31a0a803974193165b7e5ab450",
+          "size_bytes": 15
+        }
+      },
+      "html_metadata": {
+        "element_count": 374,
+        "has_headings": true,
+        "has_images": false,
+        "has_links": true,
+        "root_element": "div"
+      },
+      "name": "download"
+    },
+    "index": {
+      "files": {
+        "content": {
+          "exists": true,
+          "path": "/home/user/ffmpeg-web/src/index",
+          "sha256": "c8177fdb6dd2b478ebf579cccf81a67d2ee729f5fdad8f6b632ffd5a2b3b374d",
+          "size_bytes": 86981
+        },
+        "js": {
+          "content": "",
+          "exists": true,
+          "has_content": false,
+          "path": "/home/user/ffmpeg-web/src/index_js",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size_bytes": 0
+        },
+        "title": {
+          "content": "FFmpeg",
+          "exists": true,
+          "path": "/home/user/ffmpeg-web/src/index_title",
+          "sha256": "a16a695ef6f7b73910a01cf2b45d85000d94a9df03f58fc25f80f52d3caad91a",
+          "size_bytes": 6
+        }
+      },
+      "html_metadata": {
+        "element_count": 1008,
+        "has_headings": true,
+        "has_images": true,
+        "has_links": true,
+        "root_element": "div"
+      },
+      "name": "index"
+    },
+    "legal": {
+      "files": {
+        "content": {
+          "exists": true,
+          "path": "/home/user/ffmpeg-web/src/legal",
+          "sha256": "98e5606cf275d375d61ea921f2b775154cb4e778231f812fc9add1067325f7a8",
+          "size_bytes": 7003
+        },
+        "js": {
+          "content": "",
+          "exists": true,
+          "has_content": false,
+          "path": "/home/user/ffmpeg-web/src/legal_js",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size_bytes": 0
+        },
+        "title": {
+          "content": "FFmpeg License and Legal Considerations",
+          "exists": true,
+          "path": "/home/user/ffmpeg-web/src/legal_title",
+          "sha256": "dc2a69993716dc5518bed67064f570c03f7f0ea44dbd6f208e5c42f86b0012e7",
+          "size_bytes": 39
+        }
+      },
+      "html_metadata": {
+        "element_count": 60,
+        "has_headings": true,
+        "has_images": false,
+        "has_links": true,
+        "root_element": "div"
+      },
+      "name": "legal"
+    },
+    "olddownload": {
+      "files": {
+        "content": {
+          "exists": true,
+          "path": "/home/user/ffmpeg-web/src/olddownload",
+          "sha256": "135a9813037476685e2c6cf824447637c39c1ff21e32afc30151d1510bb2c84b",
+          "size_bytes": 35837
+        },
+        "js": {
+          "content": "",
+          "exists": true,
+          "has_content": false,
+          "path": "/home/user/ffmpeg-web/src/olddownload_js",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size_bytes": 0
+        },
+        "title": {
+          "content": "Old releases",
+          "exists": true,
+          "path": "/home/user/ffmpeg-web/src/olddownload_title",
+          "sha256": "d50e0f8128a40fdc11ad6cb3235e83c87a95877d8238bb7a249a1f21f78b0273",
+          "size_bytes": 12
+        }
+      },
+      "html_metadata": {
+        "element_count": 457,
+        "has_headings": true,
+        "has_images": false,
+        "has_links": true,
+        "root_element": "div"
+      },
+      "name": "olddownload"
+    },
+    "security": {
+      "files": {
+        "content": {
+          "exists": true,
+          "path": "/home/user/ffmpeg-web/src/security",
+          "sha256": "cd3021e03adc2af38b062a46782ad10927ac27f71b92d707bcec65ea0a9b2656",
+          "size_bytes": 165007
+        },
+        "js": {
+          "content": "",
+          "exists": true,
+          "has_content": false,
+          "path": "/home/user/ffmpeg-web/src/security_js",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size_bytes": 0
+        },
+        "title": {
+          "content": "FFmpeg Security",
+          "exists": true,
+          "path": "/home/user/ffmpeg-web/src/security_title",
+          "sha256": "b5edc7ea0f560d548308bc369c5bcbdf0b53f4a873c61fefc2d34118970e7cc9",
+          "size_bytes": 15
+        }
+      },
+      "html_metadata": {
+        "element_count": 892,
+        "has_headings": true,
+        "has_images": false,
+        "has_links": true,
+        "root_element": "div"
+      },
+      "name": "security"
+    },
+    "shame": {
+      "files": {
+        "content": {
+          "exists": true,
+          "path": "/home/user/ffmpeg-web/src/shame",
+          "sha256": "3d6473c50dcd13b25e7f1e90d25f495d59f94089e0840cce052d799163970f75",
+          "size_bytes": 11783
+        },
+        "js": {
+          "content": "",
+          "exists": true,
+          "has_content": false,
+          "path": "/home/user/ffmpeg-web/src/shame_js",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size_bytes": 0
+        },
+        "title": {
+          "content": "Hall of Shame",
+          "exists": true,
+          "path": "/home/user/ffmpeg-web/src/shame_title",
+          "sha256": "955d30bddd7c301e331ae6ef4e9f8f4f2631853036a61563bd5f030820156576",
+          "size_bytes": 13
+        }
+      },
+      "html_metadata": {
+        "element_count": 3,
+        "has_headings": false,
+        "has_images": false,
+        "has_links": false,
+        "root_element": "div"
+      },
+      "name": "shame"
+    },
+    "spi": {
+      "files": {
+        "content": {
+          "exists": true,
+          "path": "/home/user/ffmpeg-web/src/spi",
+          "sha256": "c213821690c5bc35ec4e8f2ba86273be7dc4eb2fbebd9fd966148e7ed09f3c49",
+          "size_bytes": 3577
+        },
+        "js": {
+          "content": "",
+          "exists": true,
+          "has_content": false,
+          "path": "/home/user/ffmpeg-web/src/spi_js",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "size_bytes": 0
+        },
+        "title": {
+          "content": "SPI",
+          "exists": true,
+          "path": "/home/user/ffmpeg-web/src/spi_title",
+          "sha256": "60c5158ae1887e3e0f165da5dc9bec107e9b97aa1f8c3b7b3d4058e06d8dba6d",
+          "size_bytes": 3
+        }
+      },
+      "html_metadata": {
+        "element_count": 27,
+        "has_headings": true,
+        "has_images": false,
+        "has_links": true,
+        "root_element": "div"
+      },
+      "name": "spi"
+    }
+  },
+  "summary": {
+    "pages_with_content": 14,
+    "pages_with_js": 1,
+    "pages_with_title": 14,
+    "templates_found": 9,
+    "total_pages": 14
+  },
+  "templates": {
+    "template_footer1": {
+      "exists": true,
+      "line_count": 6,
+      "path": "/home/user/ffmpeg-web/src/template_footer1",
+      "sha256": "89e8b15302bbb3ea997ebaf4eab78bf4463d524a6cc192ed957c708bbf163eef",
+      "size_bytes": 235
+    },
+    "template_footer2": {
+      "exists": true,
+      "line_count": 10,
+      "path": "/home/user/ffmpeg-web/src/template_footer2",
+      "sha256": "9b3f327607c600baa0dc71c717535fa100d42480deadd87443bc612d0a060cdb",
+      "size_bytes": 228
+    },
+    "template_footer_dev": {
+      "exists": true,
+      "line_count": 3,
+      "path": "/home/user/ffmpeg-web/src/template_footer_dev",
+      "sha256": "8386e76a8543abd7b9d32f3a6f602eeba63a58d11b179e5f584a29bdcad1d0ef",
+      "size_bytes": 140
+    },
+    "template_footer_prod": {
+      "exists": true,
+      "line_count": 3,
+      "path": "/home/user/ffmpeg-web/src/template_footer_prod",
+      "sha256": "8c8e3ee5413a45032c3a2ff65b2a5a3df3a26c703cf49ea0f0b00f8aa704e68f",
+      "size_bytes": 94
+    },
+    "template_head1": {
+      "exists": true,
+      "line_count": 5,
+      "path": "/home/user/ffmpeg-web/src/template_head1",
+      "sha256": "cec2db527bea5017f46fc785e287bb9e1e0ef72cd09e36852906f0f95279d265",
+      "size_bytes": 83
+    },
+    "template_head2": {
+      "exists": true,
+      "line_count": 60,
+      "path": "/home/user/ffmpeg-web/src/template_head2",
+      "sha256": "291a6ace626d57632df2b601cce085b66af195139a6413b55a6d8085d416039d",
+      "size_bytes": 2645
+    },
+    "template_head3": {
+      "exists": true,
+      "line_count": 3,
+      "path": "/home/user/ffmpeg-web/src/template_head3",
+      "sha256": "a9756dbb92627cfdd964f716521bb7ecbb0ebeaf09bef3e282005460abf9dfe1",
+      "size_bytes": 73
+    },
+    "template_head_dev": {
+      "exists": true,
+      "line_count": 6,
+      "path": "/home/user/ffmpeg-web/src/template_head_dev",
+      "sha256": "b12c7b92882a14379f74513a29d16b197212decbe10489d334409bfa123fcd14",
+      "size_bytes": 376
+    },
+    "template_head_prod": {
+      "exists": true,
+      "line_count": 5,
+      "path": "/home/user/ffmpeg-web/src/template_head_prod",
+      "sha256": "04b73553a8a92df4eeb37fd7552c72127bc52b685d2c547d2921e35a89c16bdf",
+      "size_bytes": 245
+    }
+  }
+}
