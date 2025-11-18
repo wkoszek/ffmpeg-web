@@ -1,0 +1,18 @@
+# Hugo build artifacts
+public/
+resources/
+.hugo_build.lock
+
+# Verification results (generated)
+verification_results.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
