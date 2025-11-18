@@ -17,7 +17,13 @@ from pathlib import Path
 from datetime import datetime
 from lxml import html as lxml_html, etree
 import hashlib
-import html2text
+
+# html2text is optional - if not installed, will output HTML instead
+try:
+    import html2text
+    HAS_HTML2TEXT = True
+except ImportError:
+    HAS_HTML2TEXT = False
 
 
 def parse_date(date_str):
@@ -234,6 +240,14 @@ def main():
     if not index_file.exists():
         print(f"Error: Index file not found: {index_file}")
         return 1
+
+    # Check for html2text if Markdown conversion requested
+    if not keep_html and not HAS_HTML2TEXT:
+        print("Warning: html2text module not found.")
+        print("Install it with: pip3 install html2text")
+        print("Falling back to HTML output (same as --html flag)")
+        print()
+        keep_html = True
 
     # Create output directory
     output_dir.mkdir(parents=True, exist_ok=True)
