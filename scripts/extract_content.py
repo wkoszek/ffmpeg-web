@@ -5,15 +5,17 @@ extract_content.py - Zero-hallucination content extractor for Hugo migration
 This script extracts content from ffmpeg.org source files and converts them
 to Hugo-compatible markdown files. Key principles:
 
-1. NO MODIFICATIONS to HTML content - byte-for-byte preservation
-2. Only add Hugo frontmatter (TOML format)
-3. Verify checksums to ensure no hallucination
-4. Output structured for diff verification
+1. NO MODIFICATIONS to HTML content - byte-for-byte preservation (default)
+2. OPTIONAL: Convert HTML to Markdown with --markdown flag
+3. Only add Hugo frontmatter (TOML format)
+4. Verify checksums to ensure no hallucination
+5. Output structured for diff verification
 
 Usage:
   ./extract_content.py <page_name> <output_dir>
   ./extract_content.py about hugo-site/content
   ./extract_content.py all hugo-site/content  # Extract all pages
+  ./extract_content.py all hugo-site/content --markdown  # Convert HTML to Markdown
 """
 
 import sys
@@ -22,10 +24,54 @@ from pathlib import Path
 from typing import Dict, List, Optional
 import json
 
+# html2text is optional - if not installed, will output HTML instead
+try:
+    import html2text
+    HAS_HTML2TEXT = True
+except ImportError:
+    HAS_HTML2TEXT = False
+
 
 def sha256_bytes(data: bytes) -> str:
     """Calculate SHA256 checksum of bytes"""
     return hashlib.sha256(data).hexdigest()
+
+
+def html_to_markdown(html_content: str) -> str:
+    """
+    Convert HTML to Markdown
+
+    Uses html2text library with FFmpeg-friendly settings:
+    - No wrapping (preserve line breaks as in original)
+    - Keep links inline
+    - Preserve code blocks
+    - Don't escape special characters unnecessarily
+    """
+    import re
+
+    h = html2text.HTML2Text()
+
+    # Configure html2text for clean output
+    h.body_width = 0  # No wrapping
+    h.unicode_snob = True  # Use unicode characters
+    h.ignore_links = False  # Keep links
+    h.ignore_images = False  # Keep images
+    h.ignore_emphasis = False  # Keep bold/italic
+    h.skip_internal_links = False  # Keep anchor links
+    h.inline_links = True  # Use inline link style [text](url)
+    h.protect_links = True  # Don't wrap URLs
+    h.wrap_links = False  # Don't wrap link text
+
+    # Convert
+    markdown = h.handle(html_content)
+
+    # Clean up common issues
+    markdown = markdown.strip()
+
+    # Remove excessive blank lines (more than 2 in a row)
+    markdown = re.sub(r'\n{3,}', '\n\n', markdown)
+
+    return markdown
 
 
 def extract_page(page_name: str, src_dir: Path) -> Dict[str, any]:
@@ -114,9 +160,9 @@ def generate_hugo_frontmatter(page_data: Dict) -> str:
     return frontmatter
 
 
-def write_hugo_content(page_data: Dict, output_dir: Path) -> Path:
+def write_hugo_content(page_data: Dict, output_dir: Path, convert_to_markdown: bool = False) -> Path:
     """
-    Write Hugo markdown file with HTML content preserved
+    Write Hugo markdown file with HTML content preserved or converted to Markdown
 
     Format:
     +++
@@ -127,7 +173,12 @@ def write_hugo_content(page_data: Dict, output_dir: Path) -> Path:
     content = "sha256..."
     +++
 
-    <original HTML content unchanged>
+    <original HTML content unchanged OR converted to Markdown>
+
+    Args:
+        page_data: Page data dict
+        output_dir: Output directory
+        convert_to_markdown: If True and html2text available, convert HTML to Markdown
     """
     name = page_data["name"]
 
@@ -136,6 +187,10 @@ def write_hugo_content(page_data: Dict, output_dir: Path) -> Path:
 
     # Get content as string (decode from bytes)
     content_str = page_data["content"].decode('utf-8')
+
+    # Optionally convert to Markdown
+    if convert_to_markdown and HAS_HTML2TEXT:
+        content_str = html_to_markdown(content_str)
 
     # Combine frontmatter + content
     full_content = frontmatter + content_str
@@ -158,14 +213,24 @@ def write_hugo_content(page_data: Dict, output_dir: Path) -> Path:
 def main():
     """Main extraction function"""
     if len(sys.argv) < 3:
-        print("Usage: extract_content.py <page_name|all> <output_dir>")
+        print("Usage: extract_content.py <page_name|all> <output_dir> [--markdown]")
         print("\nExamples:")
         print("  extract_content.py about hugo-site/content")
         print("  extract_content.py all hugo-site/content")
+        print("  extract_content.py all hugo-site/content --markdown  # Convert HTML to Markdown")
         return 1
 
     page_name = sys.argv[1]
     output_dir = Path(sys.argv[2])
+    convert_to_markdown = '--markdown' in sys.argv
+
+    # Check for html2text if Markdown conversion requested
+    if convert_to_markdown and not HAS_HTML2TEXT:
+        print("Warning: html2text module not found.")
+        print("Install it with: pip3 install html2text")
+        print("Falling back to HTML output")
+        print()
+        convert_to_markdown = False
 
     base_dir = Path("/home/user/ffmpeg-web")
     src_dir = base_dir / "src"
@@ -189,18 +254,23 @@ def main():
         print(f"Available pages: {', '.join(all_pages)}")
         return 1
 
+    format_mode = "Markdown" if convert_to_markdown else "HTML"
+    print(f"Output format: {format_mode}")
+    print(f"{'='*60}")
+
     # Extract and write each page
     results = []
     for page in pages_to_extract:
         try:
             print(f"Extracting: {page}...")
             page_data = extract_page(page, src_dir)
-            output_file = write_hugo_content(page_data, output_dir)
+            output_file = write_hugo_content(page_data, output_dir, convert_to_markdown=convert_to_markdown)
             results.append({
                 "page": page,
                 "status": "success",
                 "output": str(output_file),
-                "checksums": page_data["checksums"]
+                "checksums": page_data["checksums"],
+                "format": format_mode
             })
             print(f"  ✓ Written to: {output_file}")
         except Exception as e:
@@ -215,6 +285,7 @@ def main():
     success_count = sum(1 for r in results if r["status"] == "success")
     print(f"\n{'='*60}")
     print(f"Extraction complete: {success_count}/{len(pages_to_extract)} successful")
+    print(f"Content format: {format_mode}")
 
     # Write extraction report
     report_file = base_dir / "extraction_report.json"
