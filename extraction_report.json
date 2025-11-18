@@ -1,17 +1,160 @@
 {
   "extraction": {
-    "pages_requested": 1,
-    "pages_successful": 1,
-    "output_dir": "hugo-site/content-test"
+    "pages_requested": 14,
+    "pages_successful": 14,
+    "output_dir": "tmp/clean/content"
   },
   "results": [
     {
       "page": "about",
       "status": "success",
-      "output": "hugo-site/content-test/about.md",
+      "output": "tmp/clean/content/about.md",
       "checksums": {
         "title": "0715219768e0b4814aa626588da9555281500e660ed793fdf9f1cda8af30616b",
         "content": "eeaf52452adc68ddc49b58d7935be34227051d2b73d86f264f0f1a4474bbc8ea",
+        "js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "format": "Markdown"
+    },
+    {
+      "page": "bugreports",
+      "status": "success",
+      "output": "tmp/clean/content/bugreports.md",
+      "checksums": {
+        "title": "4664f8a1bd5464f368ae177add4b5d96a3a2f9e51a6571d0698e7edebfe20ef3",
+        "content": "5b079a34886bc7896eb08b3ba6b4afc355bbadcd7d88abda43cc613aa4d244bf",
+        "js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "format": "Markdown"
+    },
+    {
+      "page": "consulting",
+      "status": "success",
+      "output": "tmp/clean/content/consulting.md",
+      "checksums": {
+        "title": "27e779f8621a5406680d1059420939809bee3fd1fc6135ab73b7d90160d70395",
+        "content": "82c02951e543b85491f146a930aca77edf44d459f6977fb783ada8dacb04a887",
+        "js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "format": "Markdown"
+    },
+    {
+      "page": "contact",
+      "status": "success",
+      "output": "tmp/clean/content/contact.md",
+      "checksums": {
+        "title": "98b67063cf8e584d75e53b88472ee85473e01e0ea16f29ece9cc98f4a2710494",
+        "content": "58d988231cf8fca9e03feaa5e7cf4b4e186d3453582d49e1ba60bb3d09d796ca",
+        "js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "format": "Markdown"
+    },
+    {
+      "page": "donations",
+      "status": "success",
+      "output": "tmp/clean/content/donations.md",
+      "checksums": {
+        "title": "5f3360fbda697ca7f699633088f4bce3c344574450978c3c430d15a6d3cc7e91",
+        "content": "a7471390fa04813c8c5228b7bd22d61e5d12dddca7ef6b25003b47128aa47da1",
+        "js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "format": "Markdown"
+    },
+    {
+      "page": "documentation",
+      "status": "success",
+      "output": "tmp/clean/content/documentation.md",
+      "checksums": {
+        "title": "c205924de0fe636ccdde4ed616fef66f75b78e98b03620637965c033fd161141",
+        "content": "cd3380e8412bec72209dbf8ca7c4827f87a504ad00855ebc0f918f4e7fdf189d",
+        "js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "format": "Markdown"
+    },
+    {
+      "page": "download",
+      "status": "success",
+      "output": "tmp/clean/content/download.md",
+      "checksums": {
+        "title": "ec97c49de108cd7b41fcb147dd266cc695905b31a0a803974193165b7e5ab450",
+        "content": "53f4caf4286ff293107825adaea550a4292b45d036828cb661985833bb3603b9",
+        "js": "d605be13af1d68d920c987a93c72771a6faf3cb04a52a118f15a6f4bb4c6c9ad"
+      },
+      "format": "Markdown"
+    },
+    {
+      "page": "olddownload",
+      "status": "success",
+      "output": "tmp/clean/content/olddownload.md",
+      "checksums": {
+        "title": "d50e0f8128a40fdc11ad6cb3235e83c87a95877d8238bb7a249a1f21f78b0273",
+        "content": "135a9813037476685e2c6cf824447637c39c1ff21e32afc30151d1510bb2c84b",
+        "js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "format": "Markdown"
+    },
+    {
+      "page": "index",
+      "status": "success",
+      "output": "tmp/clean/content/_index.md",
+      "checksums": {
+        "title": "a16a695ef6f7b73910a01cf2b45d85000d94a9df03f58fc25f80f52d3caad91a",
+        "content": "c8177fdb6dd2b478ebf579cccf81a67d2ee729f5fdad8f6b632ffd5a2b3b374d",
+        "js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "format": "Markdown"
+    },
+    {
+      "page": "legal",
+      "status": "success",
+      "output": "tmp/clean/content/legal.md",
+      "checksums": {
+        "title": "dc2a69993716dc5518bed67064f570c03f7f0ea44dbd6f208e5c42f86b0012e7",
+        "content": "98e5606cf275d375d61ea921f2b775154cb4e778231f812fc9add1067325f7a8",
+        "js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "format": "Markdown"
+    },
+    {
+      "page": "shame",
+      "status": "success",
+      "output": "tmp/clean/content/shame.md",
+      "checksums": {
+        "title": "955d30bddd7c301e331ae6ef4e9f8f4f2631853036a61563bd5f030820156576",
+        "content": "3d6473c50dcd13b25e7f1e90d25f495d59f94089e0840cce052d799163970f75",
+        "js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "format": "Markdown"
+    },
+    {
+      "page": "security",
+      "status": "success",
+      "output": "tmp/clean/content/security.md",
+      "checksums": {
+        "title": "b5edc7ea0f560d548308bc369c5bcbdf0b53f4a873c61fefc2d34118970e7cc9",
+        "content": "cd3021e03adc2af38b062a46782ad10927ac27f71b92d707bcec65ea0a9b2656",
+        "js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "format": "Markdown"
+    },
+    {
+      "page": "spi",
+      "status": "success",
+      "output": "tmp/clean/content/spi.md",
+      "checksums": {
+        "title": "60c5158ae1887e3e0f165da5dc9bec107e9b97aa1f8c3b7b3d4058e06d8dba6d",
+        "content": "c213821690c5bc35ec4e8f2ba86273be7dc4eb2fbebd9fd966148e7ed09f3c49",
+        "js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "format": "Markdown"
+    },
+    {
+      "page": "archive",
+      "status": "success",
+      "output": "tmp/clean/content/archive.md",
+      "checksums": {
+        "title": "66f4804ee23ddc092d1bae43cb88186aa541187fff7c1cc8a4aa17e59a9f4123",
+        "content": "1f1e5183c12b35a37bbae55f92fc39199b87cc81b3aede9c48f85ba7ec85c405",
         "js": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
       "format": "Markdown"

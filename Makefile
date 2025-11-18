@@ -76,4 +76,35 @@ $(LESS_TARGET): $(CSS_SRCS)
 clean:
 	$(RM) -r $(TARGETS)
 
-.PHONY: all clean
+# Generate clean Markdown-based Hugo site in tmp/clean/
+clean-md: tmp/clean/.done
+
+tmp/clean/.done:
+	@echo "Creating clean Markdown-based site in tmp/clean/..."
+	@# Create directory structure
+	mkdir -p tmp/clean
+	@# Copy Hugo configuration and theme
+	cp hugo-site/hugo.toml tmp/clean/
+	cp hugo-site/Makefile tmp/clean/
+	cp -r hugo-site/themes tmp/clean/
+	@if [ -d hugo-site/static ]; then cp -r hugo-site/static tmp/clean/; fi
+	@if [ -d hugo-site/archetypes ]; then cp -r hugo-site/archetypes tmp/clean/; fi
+	@# Generate Markdown content from source files
+	@echo "Converting HTML content to Markdown..."
+	python3 scripts/extract_content.py all tmp/clean/content --markdown
+	@# Copy static assets from htdocs (if they exist)
+	@if [ -d htdocs/css ]; then mkdir -p tmp/clean/static/css && cp -r htdocs/css/* tmp/clean/static/css/; fi
+	@if [ -d htdocs/js ]; then mkdir -p tmp/clean/static/js && cp -r htdocs/js/* tmp/clean/static/js/; fi
+	@if [ -d htdocs/img ]; then mkdir -p tmp/clean/static/img && cp -r htdocs/img/* tmp/clean/static/img/; fi
+	@if [ -d htdocs/fonts ]; then mkdir -p tmp/clean/static/fonts && cp -r htdocs/fonts/* tmp/clean/static/fonts/; fi
+	@touch tmp/clean/.done
+	@echo ""
+	@echo "✓ Clean Markdown site created in tmp/clean/"
+	@echo "  - Hugo templates: tmp/clean/themes/"
+	@echo "  - Markdown content: tmp/clean/content/"
+	@echo "  - Build with: cd tmp/clean && hugo"
+
+clean-all: clean
+	$(RM) -r tmp/clean
+
+.PHONY: all clean clean-md clean-all
